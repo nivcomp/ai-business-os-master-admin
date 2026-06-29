@@ -40,16 +40,7 @@ Codex must preserve:
 
 ## Documentation Updates Required
 
-Update documentation when changing:
-
-- App boundaries.
-- Data ownership.
-- Provider strategy.
-- AI employee or prompt behavior.
-- Approval behavior.
-- Package or update flow.
-- Client clone behavior.
-- Revenue-critical product scope.
+Update documentation when changing app boundaries, data ownership, provider strategy, AI employee behavior, prompt behavior, approval behavior, package flow, update flow, clone behavior, or revenue-critical product scope.
 
 ## Commit Discipline
 
@@ -59,12 +50,21 @@ Examples:
 
 - Governance documentation.
 - Architecture and coding rules.
-- Lovable synchronization rules.
-- Product workflow implementation.
+- AI documentation.
+- Product documentation.
+- Business documentation.
 - Bug fix.
+
+## Verification
+
+Codex should verify changes where possible. Documentation sprints should verify that all requested documents exist in the final GitHub tree.
+
+Implementation work should run relevant tests or explain why tests were not run.
 
 ## Safety
 
 Never commit secrets, API keys, credentials, private customer data, or local environment files.
 
 When a requested change conflicts with `PROJECT_CONSTITUTION.md`, `docs/DECISIONS.md`, or `docs/ARCHITECTURE.md`, Codex should stop and document the conflict before proceeding.
+
+Related documents: `AGENTS.md`, `CODING_RULES.md`, `GIT_WORKFLOW.md`, `LOVABLE_SYNC_RULES.md`.

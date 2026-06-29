@@ -31,17 +31,7 @@ After meaningful Lovable changes, update GitHub with:
 
 ## What Must Be Documented
 
-Document changes that affect:
-
-- Master Admin vs Client Template boundaries.
-- Client cloneability.
-- Business DNA structure.
-- AI employee behavior.
-- Prompt or agent configuration.
-- Approval workflows.
-- Integrations and provider choices.
-- Data models and storage.
-- Package or update logic.
+Document changes that affect Master Admin boundaries, Client Template cloneability, Business DNA, AI employees, prompt configuration, approval workflows, integrations, provider choices, data models, package logic, or update logic.
 
 ## Sync Direction
 
@@ -51,33 +41,22 @@ If Lovable produces behavior that conflicts with GitHub documentation, either ad
 
 ## Naming Consistency
 
-Lovable UI should use customer language:
+Lovable UI should use customer language: Employees, Departments, Office, Training, Approval Center, Performance, Business DNA.
 
-- Employees
-- Departments
-- Office
-- Training
-- Approval Center
-- Performance
-- Business DNA
-
-Internal implementation may use technical language:
-
-- Agents
-- Engines
-- Modules
-- Providers
-- Registries
-- Packages
+Internal implementation may use technical language: Agents, Engines, Modules, Providers, Registries, Packages.
 
 ## Cloneability Rule
 
 Do not create Lovable features that depend on one specific client, hard-coded client data, or manually edited values that cannot be repeated for new customer clones.
 
-## Commit Rule
+## Handoff Rule
 
-Lovable-related sync changes should be committed clearly, for example:
+When Lovable creates or changes screens, record what changed, which module it belongs to, what data it needs, and whether it affects approval, security, provider usage, or cloneability.
 
-- `docs: add lovable sync rules`
-- `feat: add approval center screen`
-- `fix: remove hard-coded client settings`
+## Related Documents
+
+- `CODEX_INSTRUCTIONS.md`
+- `GIT_WORKFLOW.md`
+- `UI_PRINCIPLES.md`
+- `UX_PRINCIPLES.md`
+- `CLIENT_TEMPLATE.md`

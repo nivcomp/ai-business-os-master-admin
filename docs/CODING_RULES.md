@@ -41,23 +41,9 @@ Avoid mixing provider-specific logic directly into UI or business workflow code.
 
 ## Naming Rules
 
-Customer-facing names should follow product language:
+Customer-facing names should follow product language: Employee, Department, Training, Approval, Performance, Business DNA.
 
-- Employee
-- Department
-- Training
-- Approval
-- Performance
-- Business DNA
-
-Internal technical names may use:
-
-- Agent
-- Engine
-- Module
-- Provider
-- Registry
-- Package
+Internal technical names may use: Agent, Engine, Module, Provider, Registry, Package.
 
 Do not expose internal technical names to customers unless the surface is explicitly internal.
 
@@ -65,13 +51,7 @@ Do not expose internal technical names to customers unless the surface is explic
 
 External providers should be accessed through a provider layer when practical.
 
-A provider integration should define:
-
-- Purpose.
-- Required credentials.
-- Failure behavior.
-- Cost or rate-limit concerns.
-- Replacement path if the provider changes.
+A provider integration should define purpose, credentials, failure behavior, cost concerns, rate limits, logging, and replacement path.
 
 ## AI Rules
 
@@ -88,6 +68,12 @@ Client data must be isolated per client installation.
 Business DNA, knowledge, approvals, campaign data, CRM records, analytics, and package state should have clear ownership.
 
 Avoid storing derived AI output without enough context to audit how it was produced.
+
+## Error Handling
+
+Failures should be visible and actionable. Provider failures, AI output failures, update failures, and publishing failures should not silently disappear.
+
+Where practical, errors should include user-safe messages, internal diagnostic details, retry guidance, and support visibility.
 
 ## Commit Rules
 
@@ -110,3 +96,6 @@ Before merging important work, confirm:
 - Human approval requirements are clear.
 - Relevant documentation is updated.
 - Secrets and client-specific values are not committed.
+- Testing strategy is clear.
+
+Related documents: `GIT_WORKFLOW.md`, `SECURITY.md`, `TESTING.md`, `DEPLOYMENT.md`.
