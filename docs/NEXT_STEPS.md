@@ -20,6 +20,12 @@ The goal is not to build the whole long-term platform first. The goal is to crea
 8. Define the clone setup checklist for a new customer.
 9. Document any new architecture decision in `docs/DECISIONS.md`.
 
+## Sprint 1 Documentation Completion
+
+Documentation Sprint 1 is complete when every requested company, vision, architecture, AI, development, product, and business document exists and references related documents.
+
+After Sprint 1, the repository should be understandable by a new engineer without prior conversation.
+
 ## Minimum AI Marketing Team Scope
 
 The first revenue product should include:
@@ -56,6 +62,18 @@ A successful first build milestone should let a demo customer:
 - Store the approved result.
 - See the workflow inside a simple business-friendly interface.
 
+## Engineering Preparation
+
+Before implementation starts, define:
+
+- App shell and navigation structure.
+- Data model for Business DNA.
+- Approval state machine.
+- Prompt configuration format.
+- Provider abstraction interface.
+- Minimal analytics events.
+- Deployment and environment plan.
+
 ## Keep In Mind
 
 - Revenue first, platform always.
@@ -63,3 +81,11 @@ A successful first build milestone should let a demo customer:
 - Do not expose technical complexity to customers.
 - Document important architecture decisions as they happen.
 - Keep GitHub updated after Lovable or external tool changes.
+
+## Related Documents
+
+- `ROADMAP.md`
+- `FEATURE_ROADMAP.md`
+- `BUSINESS_DNA.md`
+- `AI_EMPLOYEES.md`
+- `ONBOARDING.md`
