@@ -10,7 +10,7 @@ Do not build the whole vision first. Build the smallest valuable product that ca
 
 ## PR-003: Sell outcomes, not tools
 
-The customer is buying results, execution and business progress — not AI, prompts or integrations.
+The customer is buying results, execution and business progress, not AI, prompts or integrations.
 
 ## PR-004: People before technology
 
@@ -39,3 +39,19 @@ Major features should be preceded by a decision, PRD or architecture note.
 ## PR-010: Keep the client template cloneable
 
 Any client-facing feature must work in a cloneable system and should not depend on hard-coded client-specific data.
+
+## PR-011: Measure customer progress
+
+Analytics should show whether customers are onboarding, approving work, publishing, and getting value.
+
+## PR-012: Make support part of the product
+
+Support workflows, diagnostics, and recovery paths should be designed early because trust is central to selling AI-powered business work.
+
+## Related Documents
+
+- `FEATURE_ROADMAP.md`
+- `UI_PRINCIPLES.md`
+- `UX_PRINCIPLES.md`
+- `ANALYTICS.md`
+- `CUSTOMER_LIFECYCLE.md`
