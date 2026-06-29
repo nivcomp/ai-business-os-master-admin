@@ -32,3 +32,35 @@ The project is divided into:
 ## FD-007: Human approval by default
 
 AI can prepare work, but business-sensitive customer-facing actions should require approval unless the user explicitly configures automation.
+
+## FD-008: Documentation is part of the product foundation
+
+The repository must be understandable by a new engineer or AI agent without prior conversation context.
+
+Major concepts should have durable Markdown documentation and links to related documents.
+
+## FD-009: Prefer domain documents over scattered notes
+
+Documentation should be grouped by company, vision, architecture, AI, development, product, and business domains.
+
+Prefer complete documents that explain ownership and decisions over many tiny notes.
+
+## FD-010: Packages are the commercial delivery unit
+
+The company should package modules, employees, prompts, settings, and workflows into sellable and installable offers.
+
+The first package is AI Marketing Team.
+
+## FD-011: Provider abstraction protects the platform
+
+External services should be accessed through provider abstractions where practical so the platform can change vendors without rewriting product workflows.
+
+## FD-012: Approval state is a core workflow concept
+
+Approval is not only a UI feature. It is a business safety model for AI-generated work that affects brand, publishing, customer communication, billing, or external systems.
+
+## FD-013: Support and analytics are platform requirements
+
+Support visibility and analytics should be designed early because they affect trust, retention, pricing, onboarding, and product quality.
+
+Related documents: `ARCHITECTURE.md`, `PRODUCT_RULES.md`, `AI_WORKFLOWS.md`, `SUPPORT.md`, `ANALYTICS.md`.

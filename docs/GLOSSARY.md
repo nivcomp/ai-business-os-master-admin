@@ -35,3 +35,41 @@ A bundle of employees, prompts, modules, settings and templates that can be inst
 
 ## Provider Layer
 An abstraction layer that prevents lock-in to one provider, such as one AI model, email service, WhatsApp provider, image model or analytics provider.
+
+## Prompt Architecture
+The system for composing reusable prompt blocks from employee role, Business DNA, knowledge, workflow state, output format, and safety rules.
+
+## Knowledge Base
+A customer-specific or package-specific store of useful information that AI employees can retrieve when producing work.
+
+## Memory
+Controlled persistence of useful context across interactions, scoped by customer and governed by privacy and quality rules.
+
+## Tool
+A controlled capability that an AI employee may use, such as retrieving knowledge, creating a draft, analyzing data, or preparing a message.
+
+## Approval Center
+The customer-facing place where AI-generated work is reviewed, changed, approved, rejected, published, or archived.
+
+## Update Center
+The Master Admin capability for publishing package, module, template, prompt, and employee updates to client installations.
+
+## Client Health
+A Master Admin view of whether a client is onboarded, active, up to date, using the product, and experiencing errors or support issues.
+
+## Cloneability
+The ability to create a new client system from the Client Template without hard-coded client data or manual one-off engineering.
+
+## Tenant
+A client installation or customer context with isolated data, settings, credentials, users, analytics, and package state.
+
+## First Value
+The moment a customer completes enough onboarding to approve a useful AI-generated output.
+
+## Related Documents
+
+- `ARCHITECTURE.md`
+- `BUSINESS_DNA.md`
+- `AI_EMPLOYEES.md`
+- `PACKAGE_SYSTEM.md`
+- `CUSTOMER_LIFECYCLE.md`
