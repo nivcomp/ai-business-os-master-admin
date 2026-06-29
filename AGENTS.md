@@ -19,6 +19,14 @@ Before making important changes, read the relevant files in `docs/`, especially:
 9. `docs/LOVABLE_SYNC_RULES.md`
 10. `docs/NEXT_STEPS.md`
 
+## Required Context Before Work
+
+For architecture work, also read `docs/MASTER_ADMIN.md`, `docs/CLIENT_TEMPLATE.md`, `docs/MODULE_SYSTEM.md`, `docs/PACKAGE_SYSTEM.md`, and `docs/UPDATE_SYSTEM.md`.
+
+For AI work, read `docs/PROMPT_ARCHITECTURE.md`, `docs/AI_EMPLOYEES.md`, `docs/KNOWLEDGE_BASE.md`, `docs/MEMORY.md`, `docs/TOOLS.md`, and `docs/AI_WORKFLOWS.md`.
+
+For product or business work, read `docs/PRODUCT_RULES.md`, `docs/FEATURE_ROADMAP.md`, `docs/PRICING.md`, `docs/ONBOARDING.md`, and `docs/SUPPORT.md`.
+
 ## Working Rules
 
 - Do not replace existing documentation when extending it.
@@ -64,6 +72,19 @@ New capabilities should clearly belong to one or more layers from `docs/ARCHITEC
 6. Infrastructure Layer
 
 When a change crosses layers, document the boundary and ownership.
+
+## Documentation Output Rules
+
+Every document should be useful to a future engineer who has no previous conversation context.
+
+Good documentation explains:
+
+- What the system is.
+- Why it exists.
+- What owns it.
+- What depends on it.
+- What decisions are settled.
+- What decisions remain open.
 
 ## Safety Rules
 
