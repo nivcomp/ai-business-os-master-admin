@@ -1,12 +1,14 @@
 # Architecture Overview
 
 ## Core Principle
+
 The platform is built around a two-application architecture.
 
 - Master Admin: internal control center.
 - Client Template: cloneable customer application.
 
 ## Layers
+
 1. Presentation Layer (UI)
 2. Business Layer
 3. AI Layer
@@ -15,6 +17,7 @@ The platform is built around a two-application architecture.
 6. Infrastructure Layer
 
 ## Shared Concepts
+
 - Business DNA
 - Prompt Engine
 - Employee Engine
@@ -88,6 +91,18 @@ Document a decision when it affects:
 - AI employee behavior, permissions, or approval rules.
 - Package, update, or deployment flow.
 - Revenue-critical product scope.
+
+## Core Architecture Documents
+
+- `MASTER_ADMIN.md` defines the private control center.
+- `CLIENT_TEMPLATE.md` defines the cloneable customer system.
+- `MODULE_SYSTEM.md` defines installable product capability units.
+- `PACKAGE_SYSTEM.md` defines bundles of modules, employees, prompts, and settings.
+- `BUSINESS_DNA.md` defines the structured business identity model.
+- `AI_EMPLOYEES.md` defines the customer-facing employee model.
+- `PROVIDER_LAYER.md` defines external service abstraction.
+- `UPDATE_SYSTEM.md` defines controlled distribution to client clones.
+- `MULTI_TENANT.md` defines isolation and tenancy rules.
 
 ## Reuse Rules
 
