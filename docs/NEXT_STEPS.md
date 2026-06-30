@@ -4,75 +4,98 @@ This file tracks the next practical actions for AI Business OS Master Admin.
 
 ## Current Priority
 
-Build toward the first revenue product: AI Marketing Team.
+Move from documentation foundation to the first build phase for AI Marketing Team.
 
-The goal is not to build the whole long-term platform first. The goal is to create a sellable, cloneable, approval-centered marketing product while laying reusable platform foundations.
+The next build phase should create enough working product structure to prove the Master Admin and Client Template model without overbuilding the full platform.
 
-## Immediate Steps
+## Sprint 2 Documentation Status
 
-1. Confirm repository structure for Master Admin.
-2. Confirm or create the separate Client Template repository.
-3. Define the minimum AI Marketing Team workflow.
-4. Define Business DNA fields required for the first customer.
-5. Define the first AI employees and their responsibilities.
-6. Define Approval Center states and user actions.
-7. Define provider choices and provider abstraction needs.
-8. Define the clone setup checklist for a new customer.
-9. Document any new architecture decision in `docs/DECISIONS.md`.
+Sprint 2 deepened:
 
-## Sprint 1 Documentation Completion
+- `PROJECT_STATE.md`
+- `BUSINESS_DNA.md`
+- `PROMPT_ARCHITECTURE.md`
+- `MASTER_ADMIN.md`
+- `CLIENT_TEMPLATE.md`
+- `SECURITY.md`
 
-Documentation Sprint 1 is complete when every requested company, vision, architecture, AI, development, product, and business document exists and references related documents.
+This gives the next build phase clearer requirements for current status, client profiles, prompt packages, Master Admin controls, cloneable client app scope, and security boundaries.
 
-After Sprint 1, the repository should be understandable by a new engineer without prior conversation.
+## Next Build Phase Task List
 
-## Minimum AI Marketing Team Scope
+### 1. Repository And App Structure
 
-The first revenue product should include:
+- Confirm whether this repository will contain the Master Admin app code or documentation first with code added later.
+- Confirm whether `ai-business-os-client-template` exists.
+- If the Client Template repository does not exist, create it with matching documentation references.
+- Define the basic folder structure for Master Admin implementation.
 
-- Business DNA setup.
-- Knowledge base foundation.
-- AI Marketing Manager.
-- AI Copywriter.
-- Content creation workflow.
-- Approval Center.
-- Landing page workflow.
-- CRM Lite foundation.
-- Basic analytics.
-- Repeatable client clone setup.
+### 2. Master Admin Shell
 
-## Decisions To Document Next
+- Build the Master Admin app shell.
+- Add navigation for Dashboard, Clients, Templates, Packages, Prompt Packages, AI Employees, Update Center, Support, and Settings.
+- Create placeholder screens that match `MASTER_ADMIN.md`.
+- Keep the UI internal, operational, and dense enough for repeated admin work.
 
-The next architectural decisions should cover:
+### 3. Client Registry
 
-- Where client-specific configuration lives.
-- How Business DNA is stored and versioned.
-- How prompts and employees are packaged.
-- How Master Admin publishes updates to Client Template clones.
-- Which provider abstractions are needed first.
-- Which actions require human approval by default.
+- Define the client record model.
+- Track client name, status, package, version, environment, health, support state, and last activity.
+- Build Clients list and Client detail placeholders.
 
-## First Build Milestone
+### 4. Business DNA Schema
 
-A successful first build milestone should let a demo customer:
+- Convert `BUSINESS_DNA.md` into an implementation schema.
+- Start with required fields: business name, services or products, target audience, brand voice, primary offer, primary CTA, languages, restrictions, and marketing goals.
+- Add validation rules and version metadata.
 
-- Complete Business DNA onboarding.
-- Use at least one AI employee to produce marketing content.
-- Review and approve output before use.
-- Store the approved result.
-- See the workflow inside a simple business-friendly interface.
+### 5. Prompt Package Format
 
-## Engineering Preparation
+- Define Global Prompt, Client Prompt, and Task Prompt structure.
+- Define Prompt Blocks.
+- Define Prompt Package metadata.
+- Add version, tests, approval status, and rollout status.
 
-Before implementation starts, define:
+### 6. AI Employee Registry
 
-- App shell and navigation structure.
-- Data model for Business DNA.
-- Approval state machine.
-- Prompt configuration format.
-- Provider abstraction interface.
-- Minimal analytics events.
-- Deployment and environment plan.
+- Define employee template structure.
+- Start with Marketing Manager and Copywriter.
+- Map employees to prompt packages, tools, approval rules, and workflows.
+
+### 7. Client Template Scope
+
+- Define first Client Template screens: Business DNA onboarding, Office dashboard, Employees, Knowledge Base, Approval Center, Content Workflow, CRM Lite, Analytics, Settings.
+- Confirm how provider keys are configured per client.
+- Confirm smoke tests for clone readiness.
+
+### 8. Security Foundation
+
+- Define where secrets and provider credentials live.
+- Define support access model.
+- Define audit events for Business DNA changes, prompt package updates, provider credential updates, support access, approval changes, and publishing actions.
+
+### 9. First Workflow
+
+- Build or prototype the first AI Marketing Team workflow: create marketing content draft from Business DNA, review it, approve it, and store it.
+- Track prompt version, Business DNA version, employee, approval state, and user feedback.
+
+### 10. Testing And Verification
+
+- Add tests for required Business DNA fields.
+- Add tests for prompt package metadata.
+- Add tests for approval states.
+- Add smoke checklist for client clone setup.
+
+## Build Phase Success Criteria
+
+The next build phase is successful when:
+
+- Master Admin has a working shell and core registry placeholders.
+- Business DNA has a defined implementation schema.
+- Prompt packages have a defined format.
+- The first AI employees are modeled.
+- The first customer workflow path is clear.
+- Security decisions for secrets, support access, and audit trails are documented or implemented.
 
 ## Keep In Mind
 
@@ -84,8 +107,11 @@ Before implementation starts, define:
 
 ## Related Documents
 
+- `PROJECT_STATE.md`
 - `ROADMAP.md`
 - `FEATURE_ROADMAP.md`
 - `BUSINESS_DNA.md`
-- `AI_EMPLOYEES.md`
-- `ONBOARDING.md`
+- `PROMPT_ARCHITECTURE.md`
+- `MASTER_ADMIN.md`
+- `CLIENT_TEMPLATE.md`
+- `SECURITY.md`
