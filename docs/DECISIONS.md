@@ -64,3 +64,49 @@ Approval is not only a UI feature. It is a business safety model for AI-generate
 Support visibility and analytics should be designed early because they affect trust, retention, pricing, onboarding, and product quality.
 
 Related documents: `ARCHITECTURE.md`, `PRODUCT_RULES.md`, `AI_WORKFLOWS.md`, `SUPPORT.md`, `ANALYTICS.md`.
+
+## FD-014: Customer-owned telephony by default
+
+Voice and telephony providers such as Twilio, SIP providers, PBX systems, or future call providers should be treated as client-owned or client-isolated provider accounts by default.
+
+For the first voice products, the preferred model is:
+
+- The client owns the telephony account, phone number, billing, and provider relationship; or
+- The platform uses an isolated provider subaccount per client when central management is required.
+
+AI Business OS owns orchestration, workflow logic, provider abstraction, Voice Receptionist Employee behavior, call logs, CRM Lite records, and support visibility.
+
+AI Business OS should not casually pool all clients through one shared telephony account unless there is a documented architecture and business decision explaining why.
+
+The application should store only provider connection references, client ownership metadata, phone numbers or extensions, connection status, and provider policy data.
+
+Actual provider secrets must not be committed to GitHub or stored directly in normal application tables.
+
+This decision protects:
+
+- Billing separation.
+- Client data isolation.
+- Easier client offboarding.
+- Reduced misuse risk across clients.
+- Cleaner support boundaries.
+- Provider replacement through adapters.
+- Client Template cloneability.
+
+Customer-facing language:
+
+- "Connect your phone system"
+- "Connect your Voice Receptionist"
+- "Your business phone provider"
+
+Internal technical language:
+
+- Telephony provider adapter.
+- Voice provider reference.
+- Client-owned provider account.
+- Client-isolated provider subaccount.
+
+This decision belongs to the future Voice Layer and Voice Receptionist Employee architecture, but it affects provider, billing, support, security, and multi-tenant design now.
+
+Copywriter v0.1 remains the current MVP. Voice features must not be implemented until a future voice build phase is explicitly approved.
+
+Related documents: `PROVIDER_LAYER.md`, `SECURITY.md`, `MULTI_TENANT.md`, `CLIENT_TEMPLATE.md`, `MASTER_ADMIN.md`, future `VOICE_LAYER.md`.
